@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+}
+
+body,
+html {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-row-gap: 50px;
+  width: 1000px;
+  margin: auto;
+  background-color: #fbfbfb;
+  padding: 0 20px;
+}
+
+.container.home {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 75px 300px auto 150px;
+  grid-template-areas:
+    "header header"
+    "aside aside"
+    "article article"
+    "footer footer";
+}
+
+.container.checkout {
+  grid-template-columns: 1fr;
+  grid-template-rows: 75px auto 150px;
+  grid-template-areas:
+    "header"
+    "form"
+    "footer";
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  grid-gap: 30px;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ececec;
+  border-top: none;
+  margin: 0 -20px;
+}
+
+header img {
+  height: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+article {
+  grid-area: article;
+}
+
+article .course:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+aside {
+  grid-area: aside;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ececec;
+}
+
+.testimonial {
+  margin: auto;
+  text-align: center;
+}
+
+.testimonial .author {
+  margin: 15px 0;
+}
+
+.testimonial-header {
+  position: relative;
+}
+
+.testimonial .quotes {
+  position: absolute;
+  z-index: 1;
+  left: 50px;
+  width: 40px;
+  top: 30px;
+}
+
+.testimonial .avatar {
+  width: 100px;
+  border-radius: 100%;
+  display: block;
+  margin: auto;
+}
+
+footer {
+  grid-area: footer;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ececec;
+  border-bottom: none;
+  margin: 0 -20px;
+}
+
+.button {
+  background-color: #3185fc;
+  padding: 10px 25px;
+  color: white;
+  border-radius: 20px;
+  display: inline-block;
+  border: 0;
+  font-family: inherit;
+  cursor: pointer;
+  font-size: initial;
+}
+
+.button:hover {
+  background-color: #1e67cd;
+}
+
+a.button {
+  text-decoration: none;
+}
+
+.course p {
+  margin: 20px 0;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 150px;
+  gap: 20px;
+}
+
+form h2 {
+  grid-column: span 2;
+}
+
+form h2:not(:first-child) {
+  margin-top: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  max-width: 300px;
+  padding: 5px;
+  font-family: inherit;
+}
