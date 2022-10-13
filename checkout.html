@@ -4,69 +4,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
     <title>Acheter - Dropformation</title>
   </head>
   <body>
     <div class="container checkout">
       <header>
-        <img src="img/logo_small.png" alt="Logo" />
+        <a href="/">
+          <img src="img/logo_small.png" alt="Logo Dropformation" />
+        </a>
         <nav>
           <a class="button" href="#">Connexion</a>
+          <img src="img/user.svg" alt="Icône utilisateur" />
         </nav>
       </header>
-      <form>
+      <form class="checkout">
+        <h1>Formulaire de paiement</h1>
+        <hr />
         <h2>Informations de contact</h2>
         <div class="input-group">
-          <label>Adresse email</label>
-          <input type="email" />
+          <label>Adresse email<input type="email" required /></label>
         </div>
         <div class="input-group">
-          <label>Téléphone</label>
-          <input type="tel" />
+          <label>Téléphone<input type="tel" required /></label>
         </div>
         <h2>Informations de facturation</h2>
         <div class="input-group">
-          <label>Prénom</label>
-          <input type="text" />
+          <label>Prénom<input type="text" required /></label>
         </div>
         <div class="input-group">
-          <label>Nom</label>
-          <input type="text" />
+          <label>Nom<input type="text" required /></label>
         </div>
         <div class="input-group">
-          <label>Adresse</label>
-          <input type="email" />
+          <label>Adresse<input type="email" required /></label>
         </div>
         <div class="input-group">
-          <label>Ville</label>
-          <input type="tel" />
+          <label>Ville<input type="tel" required /></label>
         </div>
         <div class="input-group">
-          <label>Code postal</label>
-          <input type="text" />
+          <label>Code postal<input type="text" required /></label>
         </div>
         <div class="input-group">
-          <label>Pays</label>
-          <select>
-            <option value="france">France</option>
-          </select>
+          <label
+            >Pays<select>
+              <option value="france">France</option>
+            </select></label
+          >
         </div>
         <h2>Informations de paiement</h2>
         <div class="input-group">
-          <label>Nom sur la carte</label>
-          <input type="text" />
+          <label>Nom sur la carte<input type="text" required /></label>
         </div>
         <div class="input-group">
-          <label>Numéro de carte</label>
-          <input type="text" />
+          <label>Numéro de carte<input type="text" required /></label>
         </div>
         <div class="input-group">
-          <label>Date d'expiration (MM/AA)</label>
-          <input type="text" />
+          <label
+            >Date d'expiration (MM/AA)
+            <input type="text" required />
+          </label>
         </div>
         <div class="input-group">
-          <label>CVV</label>
-          <input type="text" />
+          <label>CVV<input type="text" required /></label>
         </div>
         <input type="submit" class="button" value="Payer" />
       </form>
