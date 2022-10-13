@@ -193,7 +193,6 @@ select {
 
 form.checkout input[type="submit"] {
   grid-area: span 2 / 2;
-  width: 300px;
   margin-top: 20px;
 }
 
