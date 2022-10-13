@@ -19,8 +19,9 @@ h2 {
   grid-row-gap: 50px;
   max-width: 1000px;
   margin: auto;
-  background-color: #fbfbfb;
+  background-color: rgb(252 252 252);
   padding: 0 20px;
+  box-shadow: 0 0 3px 0px #d2d2d2;
 }
 
 .container.home {
@@ -49,7 +50,7 @@ header {
   align-items: center;
   padding: 20px;
   background-color: white;
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
   border-top: none;
   margin: 0 -20px;
 }
@@ -129,8 +130,7 @@ footer {
   grid-area: footer;
   padding: 20px;
   background-color: white;
-  border: 1px solid #ececec;
-  border-bottom: none;
+  border-top: 1px solid #ececec;
   margin: 0 -20px;
 }
 
@@ -162,22 +162,20 @@ form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 0 150px;
-  gap: 20px;
+  gap: 20px 70px;
 }
 
+form h2,
+form h1,
 form > hr {
   grid-column: span 2;
 }
 
-form h2 {
-  grid-column: span 2;
-}
-
 form h2:not(:first-child) {
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
-.input-group label {
+label.input-group {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -187,14 +185,16 @@ input[type="text"],
 input[type="email"],
 input[type="tel"],
 select {
-  max-width: 300px;
-  padding: 5px;
+  padding: 10px 15px;
   font-family: inherit;
+  border-radius: 5px;
+  border: solid 1px #d0d0d0;
 }
 
 form.checkout input[type="submit"] {
   grid-area: span 2 / 2;
   width: 300px;
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 767px) {
@@ -215,7 +215,9 @@ form.checkout input[type="submit"] {
     grid-area: auto;
   }
 
-  form.checkout h2 {
+  form h2,
+  form h1,
+  form > hr {
     grid-column: auto;
   }
 
